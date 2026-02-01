@@ -39,7 +39,7 @@ app.delete("/notes/:idx", (req, res)=>{
 //without colon(:)idx params will not works
 app.patch("/notes/:idx", (req, res)=>{
   const idx = req.params.idx
-
+  notes[idx].title = req.body.title
   notes[idx].description = req.body.description
 
   res.send("Note updated successfully")
